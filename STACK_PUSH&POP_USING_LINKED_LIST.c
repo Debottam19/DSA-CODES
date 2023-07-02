@@ -5,6 +5,7 @@ struct node
     int data;
     struct node *next;
 };
+struct node *top = NULL;
 void LinkedListDisplay(struct node *ptr)
 {
     printf("The stack is :\n");
@@ -52,17 +53,17 @@ struct node *Push(struct node *top,int value)
     }
     return top;
 }
-struct node *Pop(struct node **top)
+int Pop(struct node *topmost)
 {
     int PopedValue;
-    if(IsEmpty(*top))
+    if(IsEmpty(top))
     {
         printf("Stack is underflown!!!!\n");
     }
     else
     {
-        struct node *n = (*top);
-        *top = (*top)->next;
+        struct node *n = topmost;
+        top = topmost->next;
         PopedValue = n->data;
         free(n);
     }
@@ -71,16 +72,15 @@ struct node *Pop(struct node **top)
 int main()
 {
     int PopedElement;
-    struct node *top = NULL;
     top = Push(top,40);
     top = Push(top,20);
     top = Push(top,8);
     top = Push(top,5);
     top = Push(top,15);
     LinkedListDisplay(top);
-    PopedElement = Pop(&top);
+    PopedElement = Pop(top);
     printf("\nPoped element is : %d",PopedElement);
-    PopedElement = Pop(&top);
+    PopedElement = Pop(top);
     printf("\nPoped element is : %d",PopedElement);
     printf("\nAfter poping ");
     LinkedListDisplay(top);
