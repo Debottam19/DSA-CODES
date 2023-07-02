@@ -1,0 +1,1 @@
+BASIC CODE EGULO 😊
