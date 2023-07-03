@@ -97,11 +97,7 @@ int ParenthdsisMathching(char *exp)
             else
             {
                 PopedBracket = Pop(sp);
-                if(MatchingBrackets(PopedBracket,exp[i]))
-                {
-                    return 1;
-                }
-                else
+                if(!MatchingBrackets(PopedBracket,exp[i]))
                 {
                     return 0;
                 }
@@ -124,11 +120,11 @@ int main()
     scanf("%s",ch);
     if(ParenthdsisMathching(ch))
     {
-        printf("Parenthesis is matching for the expression %s",ch);
+        printf("Parenthesis is balanced for the expression %s",ch);
     }
     else
     {
-        printf("Parenthesis is not matching for the expression %s",ch);
+        printf("Parenthesis is not balanced for the expression %s",ch);
     }
 
     return 0;
