@@ -29,16 +29,16 @@ int IsEmpty(struct stack* ptr)
         return 0;
     } 
 }
-void Push(struct stack *ptr,char value)
+void Push(struct stack *ptr,char symbol)
 {
     if(IsFull(ptr))
     {
-        printf("Stack is overflown! You can't push %c in the stack\n",value);
+        printf("Stack is overflown! You can't push %c in the stack\n",symbol);
     }
     else
     {
         ptr->top++;
-        ptr->arr[ptr->top] = value;
+        ptr->arr[ptr->top] = symbol;
     }
 }
 char Pop(struct stack *ptr)
