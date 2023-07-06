@@ -99,8 +99,8 @@ char *InfixToPostfix(char *Infix)
         if(!IsOperator(Infix[i]))
         {
             Postfix[j] = Infix[i];
-            j++;
             i++;
+            j++;
         }
         else
         {
