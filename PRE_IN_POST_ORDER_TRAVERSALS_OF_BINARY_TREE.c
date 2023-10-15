@@ -87,6 +87,7 @@ void PostOrderCharacter(struct node *root)
         printf("%c ",root->ch);
     }
 }
+// Main function
 int main()
 {
     // Creating the nodes with Integers
@@ -115,8 +116,18 @@ int main()
     int_5->right = int_10;
     int_6->left = int_11;
     int_7->right = int_12;
+    // The tree with Integers will look like this:-
+    //            1
+    //          /   \          /
+    //         /     \         /
+    //        /       \        /
+    //       2         3       
+    //      / \       / \      /
+    //     4   5     6   7     
+    //    /   / \   /     \    /
+    //   8   9  10 11     12  
     // Now printing the PREORDER TRAVERSAL with Integers
-    printf("The PreOrder traversal of the binary tree with integers is :\n");
+    printf("\nThe PreOrder traversal of the binary tree with integers is :\n");
     PreOrderInteger(int_1);
     printf("\n");
     // Now printing the INORDER TRAVERSAL with Integers
@@ -128,6 +139,7 @@ int main()
     PostOrderInteger(int_1);
     printf("\n");
     printf("\n");
+
     // Creating the nodes with Characters or Alphabets
     // This is a different tree from the previous tree with Integers
     struct node *alphabet_1 = CreateNodeCharacter('A');
@@ -154,6 +166,16 @@ int main()
     alphabet_6->left = alphabet_10;
     alphabet_6->right = alphabet_11;
     alphabet_7->right = alphabet_12;
+    // The tree with Alphabets will look like this:-
+    //            A
+    //          /   \          /
+    //         /     \         /
+    //        /       \        /
+    //       B         C       
+    //      / \       / \      /
+    //     D   E     F   G     
+    //    / \       / \   \    /
+    //   H   I     J   K   L  
     // Now printing the PREORDER TRAVERSAL with Characters or Alphabets
     printf("The PreOrder traversal of the binary tree with alphabets is :\n");
     PreOrderCharacter(alphabet_1);
