@@ -121,7 +121,7 @@ int main()
 {
     int n;
 
-    printf("Enter the size of matrices (n x n):\n ");
+    printf("Enter the size of the square matrices (n x n):\n ");
     scanf("%d", &n);
 
     int A[10][10], B[10][10], C[10][10];
